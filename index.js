@@ -81,9 +81,9 @@ ${description}
 *[Questions](#questions)  
 ## Installation
 To install necessary dependencies, run the following command:
-```bash
+
 ${install}
-```
+
 ## Usage
 ${usage}
 ## License
@@ -92,22 +92,26 @@ ${license}
 ${contribute}
 ## Tests
 To run the tests, run the following command:
-```bash
+
 ${command}
-```
+
 ### Questions
 If you have any questions about the repo, open an issue or contact me at ${email}.
 
-GitHub: ${github}
-        `
+GitHub: ${github}`;
+writeToFile(title,template);
         })
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(title, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data,(err)=>
+    err ? console.log(err) : console.log('Success!')
+    )
+}
 
-// TODO: Create a function to initialize app
-function init() {}
+// // TODO: Create a function to initialize app
+// function init() {}
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
