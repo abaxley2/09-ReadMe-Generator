@@ -64,9 +64,10 @@ const questions = [
             usage,
             contribute
         })=>{
-        const template = `
+        const markdown = `
 # ${title}
 
+`+ licenseBadge +`
 
 
 ## Description
@@ -85,11 +86,14 @@ To install necessary dependencies, run the following command:
 ${install}
 
 ## Usage
-${usage}
+${usage}  
+
 ## License
-${license}
+This product is licensed under the ${license} license.  
+
 ## Contribution
-${contribute}
+${contribute}  
+
 ## Tests
 To run the tests, run the following command:
 
@@ -99,7 +103,7 @@ ${command}
 If you have any questions about the repo, open an issue or contact me at ${email}.
 
 GitHub: ${github}`;
-writeToFile(title,template);
+writeToFile(title,markdown);
         })
 ];
 
@@ -110,8 +114,8 @@ function writeToFile(fileName, data) {
     )
 }
 
-// // TODO: Create a function to initialize app
-// function init() {}
+// testing sample badge
+// const $$$ = ("sample badge");
 
-// // Function call to initialize app
-// init();
+
+
