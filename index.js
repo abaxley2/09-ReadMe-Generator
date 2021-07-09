@@ -67,7 +67,7 @@ const questions = [
         const markdown = `
 # ${title}
 
-`+ licenseBadge +`
+`+ $$$ +`
 
 
 ## Description
@@ -115,7 +115,7 @@ function writeToFile(fileName, data) {
 }
 
 // testing sample badge
-// const $$$ = ("sample badge");
+const $$$ = ("sample badge");
 
 
 
